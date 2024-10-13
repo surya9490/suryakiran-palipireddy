@@ -27,6 +27,7 @@ class DynamicCard extends HTMLElement {
   }
 
   toggleAddTocart() {
+    debugger
     if (this.currentVariant) {
       this.addTocartButton?.removeAttribute('disabled');
     } else {
@@ -35,7 +36,18 @@ class DynamicCard extends HTMLElement {
   }
 
   getCurrentSelectedOptions() {
-    this.currentOptions = [this.querySelector('custom-dropdown'), ...this.querySelectorAll('input:checked')].map((option) => option.value);
+    this.currentOptions = [];
+    const fields = this.querySelectorAll('[fieldset]');
+
+      fields.forEach((selector) => {
+        if (selector.dataset.selectorType === 'dropdown') {
+          this.currentOptions.push(selector.querySelector('custom-dropdown').value);
+        } else {
+          const selected = selector.querySelector('input:checked');
+          this.currentOptions.push(selected ? selected.value : null);
+        }
+      });
+      return this.currentOptions 
   }
 
   getVariantsData() {

@@ -18,7 +18,8 @@
         <div class="product_variants">
           <label class="option-name">{{ options.name }}</label>
           {% assign option_name = options.name | downcase | handleize %}
-          <div class="product__variants-options {{  options.name | downcase | handleize }}">
+          <div class="product__variants-options {{  options.name | downcase | handleize }}" fieldset
+            data-selector-type='{% if option_name == 'size' %}dropdown{% else %}input{% endif %}'>
             {% unless option_name == 'size' %}
               {% for value in options.values %}
                 <div class="product__variant-option" style="--option-color:{{ value | escape }}">
