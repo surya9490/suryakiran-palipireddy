@@ -1,8 +1,39 @@
 {
   "sections": {
+    "banner_DmMVx9": {
+      "type": "banner",
+      "blocks": {
+        "header_RrqinD": {
+          "type": "header",
+          "settings": {
+            "heading": "Find the ideal gift for your loved ones.",
+            "button_url": "shopify:\/\/pages\/contact",
+            "button_label": "Shop Now",
+            "logo": "shopify:\/\/shop_images\/Group_1000007777.png"
+          }
+        }
+      },
+      "block_order": [
+        "header_RrqinD"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_3.png",
+        "desktop_image": "shopify:\/\/shop_images\/Group_1000008197.png",
+        "Heading": "The Gift Guide",
+        "description": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.<\/p>",
+        "caption": "<p>Discover Joy: Your Ultimate Holiday Gift Destination.<\/p>",
+        "button_url": "shopify:\/\/blogs\/news",
+        "button_label": "Shop Now",
+        "banner_bottom": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR",
+        "text_alignment_mobile": "center",
+        "text_alignment_desktop": "left",
+        "box_align": "bottom-left"
+      }
+    },
     "product_grid_aADHh3": {
       "type": "product-grid",
       "settings": {
+        "heading": "Tisso Vision in the wild",
         "product_list": [
           "black-leather-bag",
           "blue-silk-tuxedo",
@@ -19,6 +50,7 @@
     }
   },
   "order": [
+    "banner_DmMVx9",
     "product_grid_aADHh3"
   ]
 }

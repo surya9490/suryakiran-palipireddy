@@ -17,13 +17,19 @@
       <div class="header-content">
         <div class="medium-hide">{% render 'hamburger' %}</div>
         <div class="image">
-          {% render 'image', mobileImage: block.settings.logo, desktopImage: block.settings.logo %}
+          {% if block.settings.logo != blank %}
+            {% render 'image', mobileImage: block.settings.logo, desktopImage: block.settings.logo %}
+          {% endif %}
         </div>
-        <div class="content mobile-hide">{{ block.settings.heading }}</div>
-        <a class="banner-button mobile-hide" href="{{ block.settings.button_url }}">
-          <span class="label">{{ block.settings.button_label }}</span>
-          <span class="right-arrow">{% render 'right-arrow' %}</span>
-        </a>
+        {% if block.settings.heading != blank %}
+          <div class="content mobile-hide">{{ block.settings.heading }}</div>
+        {% endif %}
+        {% if block.settings.button_url and block.settings.button_label %}
+          <a class="banner-button mobile-hide" href="{{ block.settings.button_url }}">
+            <span class="label">{{ block.settings.button_label }}</span>
+            <span class="right-arrow">{% render 'right-arrow' %}</span>
+          </a>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
@@ -39,13 +45,19 @@
       <div class="banner-context-wrapper {{ section.settings.box_align_mobile }} {{ section.settings.box_align }}">
         <div class="banner-context ">
           <div class="banner-text mobile-hide">
-            <h2 class="heading">{{ section.settings.Heading }}</h2>
-            <div class="description">{{ section.settings.description }}</div>
+            {% if section.settings.heading != blank %}
+              <h2 class="heading">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.description != blank %}
+              <div class="description">{{ section.settings.description }}</div>
+            {% endif %}
           </div>
-          <a class="banner-button" href="{{ section.settings.button_url }}">
-            <span class="label">{{ section.settings.button_label }}</span>
-            <span class="right-arrow">{% render 'right-arrow' %}</span>
-          </a>
+          {% if section.settings.button_url and section.settings.button_label %}
+            <a class="banner-button" href="{{ section.settings.button_url }}">
+              <span class="label">{{ section.settings.button_label }}</span>
+              <span class="right-arrow">{% render 'right-arrow' %}</span>
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -77,7 +89,7 @@
     },
     {
       "type": "text",
-      "id": "Heading",
+      "id": "heading",
       "label": "heading",
       "default": "The Gift Guide"
     },
