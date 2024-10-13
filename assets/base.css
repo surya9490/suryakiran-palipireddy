@@ -79,7 +79,7 @@
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.7rem;
 }
 
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
@@ -102,7 +102,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 4.6rem;
   }
 
   .header.page-width,
@@ -3594,4 +3594,13 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
+}
+
+
+@font-face {
+  font-family: "Lustria";
+  src: url("https://cdn.shopify.com/s/files/1/0906/4857/6312/files/Lustria-Regular.ttf?v=1728799982") format("truetype");
+  display: swap;
+  font-weight: 400;
+  font-style: normal;
 }
