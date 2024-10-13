@@ -73,7 +73,7 @@ class DynamicCard extends HTMLElement {
     if (this.currentVariant) {
       this.formData.items.push({ id: this.currentVariant.id, quantity: 1 });
     }
-    //pass the bunlde product if the condition matches
+    //pass the bunlde product to the form if the condition matches
     const bundleData = this.closest('product-grid')?.getBundleProductData();
     if (bundleData && this.currentOptions.every(option => bundleData?.bundleConditionOptions?.includes(option?.toLowerCase()))) {
       this.formData.items.push(
@@ -81,7 +81,7 @@ class DynamicCard extends HTMLElement {
           id: bundleData.bundleId,
           quantity: 1,
           properties: {
-            '_bunlde': true
+            '_bundle': true
           }
         }
       );
