@@ -3604,3 +3604,13 @@ details-disclosure > details {
   font-weight: 400;
   font-style: normal;
 }
+
+section + section {
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  section + section {
+    margin-top: 60px;
+  }
+}

@@ -27,7 +27,6 @@ class DynamicCard extends HTMLElement {
   }
 
   toggleAddTocart() {
-    debugger
     if (this.currentVariant) {
       this.addTocartButton?.removeAttribute('disabled');
     } else {
