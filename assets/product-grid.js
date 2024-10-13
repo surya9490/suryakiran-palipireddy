@@ -197,7 +197,7 @@ class ProductGrid extends HTMLElement {
 
 customElements.define('product-grid', ProductGrid);
 
-
+//custom select tag
 class CustomDropdown extends HTMLElement {
   constructor() {
     super();
