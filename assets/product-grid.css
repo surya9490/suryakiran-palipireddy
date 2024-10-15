@@ -294,7 +294,6 @@ picture {
 }
 
 body:has(dialog[open]) {
-  filter: blur(1px);
   overflow: hidden;
 }
 
