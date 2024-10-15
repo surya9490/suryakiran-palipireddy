@@ -102,6 +102,10 @@ class CartDrawer extends HTMLElement {
       {
         id: 'cart-icon-bubble',
       },
+      {
+        id:'quick-view',
+        selector: '.quick-card',
+      }
     ];
   }
 

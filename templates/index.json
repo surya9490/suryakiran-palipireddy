@@ -1,75 +1,56 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "banner_DmMVx9": {
+      "type": "banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "header_RrqinD": {
+          "type": "header",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "heading": "Find the ideal gift for your loved ones.",
+            "button_url": "shopify:\/\/pages\/contact",
+            "button_label": "Shop Now",
+            "logo": "shopify:\/\/shop_images\/Group_1000007777.png"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "header_RrqinD"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "image": "shopify:\/\/shop_images\/Frame_3.png",
+        "desktop_image": "shopify:\/\/shop_images\/Group_1000008197.png",
+        "Heading": "The Gift Guide",
+        "description": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.<\/p>",
+        "caption": "<p>Discover Joy: Your Ultimate Holiday Gift Destination.<\/p>",
+        "button_url": "shopify:\/\/blogs\/news",
+        "button_label": "Shop Now",
+        "banner_bottom": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR",
+        "text_alignment_mobile": "center",
+        "text_alignment_desktop": "left",
+        "box_align": "bottom-left"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "product_grid_aADHh3": {
+      "type": "product-grid",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "heading": "Tisso Vision in the wild",
+        "product_list": [
+          "black-leather-bag",
+          "blue-silk-tuxedo",
+          "chequered-red-shirt",
+          "classic-leather-jacket",
+          "classic-varsity-top",
+          "dark-denim-top"
+        ],
+        "rows_in_mobile": "2",
+        "rows_in_desktop": "3",
+        "bundle_product": "dark-winter-jacket",
+        "condition": "black, m"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "banner_DmMVx9",
+    "product_grid_aADHh3"
   ]
 }

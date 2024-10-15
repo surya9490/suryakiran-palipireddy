@@ -1,0 +1,358 @@
+.product-image {
+  position: relative;
+}
+
+.product-grid {
+  --border-color: black;
+  --button-text: white;
+  --button-background: black;
+  --button-hover-text: black;
+  --button-hover-background: #fff544;
+}
+
+.product-grid .popup-button {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #f8f8f8e5;
+  top: 20%;
+  right: 20%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 3px 4px 0px #00000033;
+  display: inline-block;
+  padding: 0;
+}
+
+.product-grid .popup-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.product-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 433 / 444;
+}
+
+.product-grid dynamic-card img {
+  aspect-ratio: 120 / 140;
+}
+.custom-dropdown-wrapper {
+  width: 200px;
+  position: relative;
+}
+
+.custom-dropdown-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.custom-dropdown-select.active .arrow {
+  transform: rotate(180deg);
+}
+
+select:focus-visible {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+}
+
+
+dialog {
+  padding: 0;
+  border: none;
+}
+
+product-grid .content {
+  width: 100%;
+  max-width: 311px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px #00000033;
+}
+
+.dialog-close-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.dialog-close-wrapper button {
+  border: none;
+  background-color: transparent;
+}
+
+.close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  top: 12px;
+  right: 20px;
+}
+dialog .close:hover {
+  opacity: 1;
+}
+dialog .close:before,
+dialog .close:after {
+  position: absolute;
+  content: " ";
+  height: 12px;
+  width: 1px;
+  background-color: #333;
+  inset: 0;
+  margin: auto;
+}
+dialog .close:before {
+  transform: rotate(45deg);
+}
+dialog .close:after {
+  transform: rotate(-45deg);
+}
+
+.card-wrapper {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 120fr 146fr;
+  margin-top: 16px;
+}
+
+.product_title {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19.2px;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.product_price {
+  font-family: Lustria;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  margin: 5px 0;
+}
+
+.product_description {
+  font-family: Jost;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 15.4px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.product_description p {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+picture {
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.option-name {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  text-align: left;
+}
+
+.product__variant-option input + label {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-left: 15px;
+}
+.product__variants-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2px;
+  grid-template-rows: 40px;
+}
+
+.product__variant-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  transition: background-color 0.3s ease;
+  transform-origin: left center;
+  cursor: pointer;
+
+}
+.product__variant-option:nth-child(2) {
+  border-right: 1px solid var(--border-color);
+}
+
+
+
+.product__variant-option:has(input:checked) {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  transition: background-color 0.3s ease;
+}
+
+.product__variant-option label::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.product__variant-option::before {
+  content: "";
+  width: 4px;
+  background-color: var(--option-color);
+  display: inline-block;
+  height: 100%;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.product-options-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.submit-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background: none;
+  height: 45px;
+  background: black;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px 0px #00000033;
+  transform-origin: left center;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(
+      to left,
+      var(--button-background) 50%,
+      var(--button-hover-background) 50%
+    )
+    right;
+  background-size: 200%;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-position: left;
+  color: var(--button-hover-text);
+}
+.loader-wrapper,
+.submit-button .right-arrow {
+  position: absolute;
+  right: 20px;
+  line-height: 0;
+}
+
+.submit-button .right-arrow svg path {
+  fill: var(--button-text);
+}
+.submit-button:hover .right-arrow svg path {
+  fill: var(--button-hover-text);
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.submit-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.product__variants-options.size {
+  grid-template-columns: 1fr;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--button-text);
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotate 1s linear infinite;
+  border-radius: 50%;
+  background-color: transparent;
+  border-bottom-color: var(--button-hover-background);
+}
+
+.submit-button:hover .loader {
+  border-color: var(--border-color);
+  border-bottom-color: white;
+}
+
+dialog::backdrop {
+  max-width: 100%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.product-grid .section-heading {
+  font-family: 'Lustria';
+  font-size: 24px;
+  text-align: center;
+}
+
+@media only screen and (min-width:768px) {
+  .product-grid .popup-button  {
+    height: 22px;
+    width: 22px;
+  }
+  .hotspot {
+    font-size: 16px;
+  }
+  .product-grid .section-heading {
+    font-family: 'Lustria';
+    font-size: 36px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,56 @@
+<dynamic-card class='quick-card'>
+  <div class="card-wrapper">
+    <div class="card_image">
+      {% render 'image', mobileImage: product.featured_image, desktopImage: product.featured_image %}
+    </div>
+    <div class="card-info">
+      <h2 class="product_title">{{ product.title }}</h2>
+      <p class="product_price">{{ product.price }}</p>
+      <div class="product_description">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+
+  <div class="product-options-wrapper">
+    {% for options in product.options_with_values %}
+      <div class="product_variants-wrapper">
+        <div class="product_variants">
+          <label class="option-name">{{ options.name }}</label>
+          {% assign option_name = options.name | downcase | handleize %}
+          <div class="product__variants-options {{  options.name | downcase | handleize }}" fieldset
+            data-selector-type='{% if option_name == 'size' %}dropdown{% else %}input{% endif %}'>
+            {% unless option_name == 'size' %}
+              {% for value in options.values %}
+                <div class="product__variant-option" style="--option-color:{{ value | escape }}">
+                  <input
+                    class="hidden"
+                    type="radio"
+                    id="{{ section.id }}-{{ options.position}}-{{ forloop.index }}"
+                    name="{{ options.name }}-{{ product.id }}"
+                    value="{{ value | escape }}"
+                  >
+                  <label for="{{ section.id }}-{{ options.position}}-{{ forloop.index }}">{{ value }}</label>
+                </div>
+              {% endfor %}
+            {% else %}
+              <custom-dropdown placeholder="Select an option">
+                {% for value in options.values %}
+                  <li data-value="{{ value }}">{{ value }}</li>
+                {% endfor %}
+              </custom-dropdown>
+            {% endunless %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="submit-button" add-to-cart>
+    <span>Add to Cart</span>
+    <span class="right-arrow">{% render 'right-arrow' %}</span>
+    <span class='loader-wrapper hidden'>
+      <span class="loader"></span>
+    </span>
+  </button>
+  <noscript type="application/json">{{ product.variants | json }}</noscript>
+</dynamic-card>
